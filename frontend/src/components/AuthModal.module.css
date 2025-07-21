@@ -1,0 +1,42 @@
+/* src/components/AuthModal.module.css */
+
+.authModalContainer {
+    /* Padding and width are managed by the parent Modal.js */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .toggleButtons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-lg); /* Space below the toggle buttons */
+    background-color: var(--border-color); /* Light background for toggle bar */
+    border-radius: var(--border-radius-md); /* Rounded ends for toggle bar */
+    overflow: hidden; /* To clip border-radius for buttons */
+    max-width: 300px; /* Limit width of toggle bar */
+    margin-left: auto; /* Center the toggle bar */
+    margin-right: auto;
+  }
+  
+  .toggleButton {
+    flex: 1; /* Distribute space evenly */
+    padding: 12px 15px;
+    background-color: transparent; /* Transparent by default */
+    color: var(--text-dark-gray);
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+    transition: all var(--transition-speed) var(--transition-ease);
+    text-align: center;
+  }
+  
+  .toggleButton.active {
+    background-color: var(--primary-purple); /* Active tab color */
+    color: white;
+    box-shadow: var(--shadow-sm); /* Subtle shadow for active tab */
+  }
+  
+  .toggleButton:hover:not(.active) {
+    background-color: var(--border-color); /* Light hover effect for inactive */
+  }

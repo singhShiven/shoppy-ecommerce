@@ -1,0 +1,88 @@
+/* src/components/Modal.module.css */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0; /* Hidden by default for animation */
+  transition: opacity var(--transition-speed) var(--transition-ease);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.overlayOpen { /* <-- NEW: Class to make overlay visible */
+  opacity: 1;
+}
+
+.modalContent {
+  background-color: var(--background-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  transform: translateY(20px) scale(0.95); /* Start slightly below for animation, slight scale */
+  opacity: 0; /* Start hidden for animation */
+  transition: transform var(--transition-speed) var(--transition-ease),
+              opacity var(--transition-speed) var(--transition-ease);
+  pointer-events: none; /* Disable interaction when hidden */
+  box-sizing: border-box;
+}
+
+.modalContentOpen { /* <-- NEW: Class to make modal content visible and animated */
+    transform: translateY(0) scale(1); /* Slide into place and scale to 1 */
+    opacity: 1;
+    pointer-events: auto; /* Enable interaction when visible */
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modalTitle {
+  font-size: var(--font-size-lg);
+  color: var(--primary-purple);
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: var(--text-muted-gray);
+  padding: 0;
+  transition: color var(--transition-speed) var(--transition-ease);
+}
+
+.closeButton:hover {
+  color: var(--danger-color);
+}
+
+.modalBody {
+  padding-top: var(--spacing-md);
+}
+
+/* Mobile adjustments for modal */
+@media (max-width: 480px) {
+  .modalContent {
+    padding: var(--spacing-md);
+    margin: var(--spacing-sm);
+  }
+  .modalTitle {
+    font-size: var(--font-size-md);
+  }
+}

@@ -1,0 +1,127 @@
+/* src/pages/AboutUsPage.module.css */
+
+.aboutPageContainer {
+    padding: var(--spacing-xxl) var(--spacing-md); /* Use consistent section padding */
+    max-width: 1000px; /* Wider than typical forms, narrower than full page */
+    margin: var(--spacing-lg) auto; /* Center the page content */
+    background-color: var(--background-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg); /* Prominent shadow for the page container */
+    box-sizing: border-box;
+    overflow: hidden; /* For any internal elements that might overflow slightly */
+    position: relative; /* For absolutely positioned elements/decorations */
+  }
+  
+  .sectionTitle {
+    font-size: var(--font-size-h2);
+    margin-bottom: var(--spacing-xl);
+    color: var(--primary-purple);
+    text-align: center;
+  }
+  
+  .introParagraph {
+    font-size: var(--font-size-md);
+    color: var(--text-dark-gray);
+    margin-bottom: var(--spacing-xxl); /* More space after intro */
+    line-height: 1.8; /* Better readability */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .missionSection,
+  .valuesSection {
+    margin-bottom: var(--spacing-xxl);
+    padding: var(--spacing-xl);
+    background-color: var(--light-page-bg); /* Subtle background for sub-sections */
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    text-align: left; /* Text alignment within sections */
+  }
+  
+  .missionSection h3,
+  .valuesSection h3 {
+    font-size: var(--font-size-h3);
+    color: var(--text-dark-gray);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+  }
+  
+  .missionText,
+  .valueItem {
+    font-size: var(--font-size-base);
+    color: var(--text-muted-gray);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md); /* Space between list items */
+  }
+  
+  .valueItem strong {
+    color: var(--text-dark-gray);
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .closingStatement {
+    font-size: var(--font-size-md);
+    color: var(--primary-purple);
+    font-weight: var(--font-weight-bold);
+    margin-top: var(--spacing-xl);
+    text-align: center;
+  }
+  
+  /* --- Visual Decorations (Abstract Shapes) --- */
+  .decorationCircle1 {
+    position: absolute;
+    top: 50px;
+    left: -30px;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(139, 92, 246, 0.1); /* Primary Purple transparent */
+    border-radius: 50%;
+    z-index: 0;
+    animation: floatUpAndDown 10s infinite ease-in-out;
+  }
+  
+  .decorationSquare1 {
+    position: absolute;
+    bottom: 100px;
+    right: -40px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(251, 146, 60, 0.1); /* Accent Orange transparent */
+    transform: rotate(45deg);
+    z-index: 0;
+    animation: floatDownAndUp 12s infinite ease-in-out reverse;
+  }
+  
+  /* --- Responsive Adjustments --- */
+  @media (max-width: 768px) {
+    .aboutPageContainer {
+      padding: var(--spacing-xl) var(--spacing-md);
+      margin: var(--spacing-md) auto;
+    }
+    .sectionTitle {
+      font-size: var(--font-size-xl);
+    }
+    .introParagraph {
+      font-size: var(--font-size-base);
+    }
+    .missionSection, .valuesSection {
+      padding: var(--spacing-lg);
+    }
+    .decorationCircle1, .decorationSquare1 {
+      display: none; /* Hide complex animations on smaller screens for performance */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .aboutPageContainer {
+      padding: var(--spacing-lg) var(--spacing-sm);
+      margin: var(--spacing-sm) auto;
+    }
+    .sectionTitle {
+      font-size: var(--font-size-lg);
+    }
+    .introParagraph {
+      font-size: var(--font-size-sm);
+    }
+  }

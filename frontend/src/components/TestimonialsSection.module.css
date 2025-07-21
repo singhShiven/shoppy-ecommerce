@@ -1,0 +1,126 @@
+/* src/components/TestimonialsSection.module.css */
+
+.testimonialsSection {
+    padding: var(--spacing-xxl) var(--spacing-md);
+    margin-bottom: var(--spacing-xxl);
+    background: linear-gradient(135deg, var(--light-page-bg) 0%, rgba(139, 92, 246, 0.05) 100%); /* Light gradient background */
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    font-size: var(--font-size-h2);
+    color: var(--primary-purple);
+  }
+  
+  .testimonialsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns for desktop */
+    gap: var(--spacing-xl);
+    justify-content: center;
+    align-items: stretch; /* Make cards stretch to same height */
+  }
+  
+  .testimonialCard {
+    background-color: var(--background-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform var(--transition-speed) var(--transition-ease), box-shadow var(--transition-speed) var(--transition-ease);
+    height: 100%; /* Important for stretch */
+  }
+  
+  .testimonialCard:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .ratingStars {
+    font-size: 1.5em;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .reviewText {
+    font-size: var(--font-size-base);
+    color: var(--text-dark-gray);
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1; /* Allows text to push info to bottom */
+  }
+  
+  .customerInfo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: auto; /* Pushes customer info to the bottom */
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Circular avatar */
+    background: linear-gradient(45deg, var(--primary-purple), var(--accent-orange)); /* Gradient background for avatar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2em;
+    font-weight: var(--font-weight-bold);
+    flex-shrink: 0;
+  }
+  
+  .customerDetails {
+    text-align: left;
+  }
+  
+  .customerName {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-dark-gray);
+    margin-bottom: 2px;
+  }
+  
+  .verifiedBadge {
+    font-size: var(--font-size-sm);
+    color: var(--success-color); /* Green for verified */
+    font-weight: var(--font-weight-medium);
+    padding: 3px 8px;
+    background-color: color-mix(in srgb, var(--success-color) 10%, transparent); /* Light green background */
+    border-radius: var(--border-radius-full); /* Pill shape */
+  }
+  
+  /* --- Responsive adjustments --- */
+  @media (max-width: 768px) {
+    .testimonialsGrid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Two columns on tablets */
+      gap: var(--spacing-lg);
+    }
+    .testimonialsSection {
+      padding: var(--spacing-xl) var(--spacing-md);
+    }
+    .sectionTitle {
+      font-size: var(--font-size-xl);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .testimonialsGrid {
+      grid-template-columns: 1fr; /* Single column on mobile */
+      gap: var(--spacing-md);
+    }
+    .testimonialsSection {
+      padding: var(--spacing-lg) var(--spacing-sm);
+    }
+    .sectionTitle {
+      font-size: var(--font-size-lg);
+    }
+  }
