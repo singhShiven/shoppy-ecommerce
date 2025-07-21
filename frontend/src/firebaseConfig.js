@@ -14,7 +14,7 @@ import { getFunctions } from "firebase/functions"; // For Cloud Functions
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA5vwsONin_VN7ZvHPlmRxZYQC9FNbPPvE",
+  apiKey: "GOOGLE_API_KEY",
   authDomain: "e-commerce-77358.firebaseapp.com",
   projectId: "e-commerce-77358",
   storageBucket: "e-commerce-77358.firebasestorage.app",
