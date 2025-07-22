@@ -107,7 +107,7 @@ This project is licensed under the MIT License. Feel free to use and customize i
 
 ## 👋 Connect with Me
 
-- 📧 [Email](shivendrasingh0020@gmail.com)
+- 📧 Email shivendrasingh0020@gmail.com
 - 🔗 [LinkedIn](https://www.linkedin.com/in/shivendra-singh-645a7a258/)
 - 🌐 [Portfolio](https://shivendra-data-scientist-portfolio.lovable.app)
 - 🛠️ [GitHub Projects](https://github.com/singhShiven)
